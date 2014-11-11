@@ -6,7 +6,8 @@ var OAuth2Provider = require('../../lib/index').OAuth2Provider,
     MemoryStore = require('express-session').MemoryStore,
     bodyParser = require('body-parser'),
     cookieParser = require('cookie-parser'),
-    logger = require('morgan');
+    logger = require('morgan'),
+    storage = require('./Storage');
 
 // hardcoded list of <client id, client secret> tuples
 var myClients = {
@@ -20,7 +21,8 @@ var myGrants = {};
 
 var oauthProvider = new OAuth2Provider({
     crypt_key: 'encryption secret',
-    sign_key: 'signing secret'
+    sign_key: 'signing secret',
+    storage: storage
 });
 
 oauthProvider.checkLogin(function (req, res, next) {

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad942c79-7eae-479e-a0f8-b45c5043796d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/oauth.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/old.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/v2_express4/Storage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/v2_express4/app.js" afterPath="$PROJECT_DIR$/examples/v2_express4/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/oauth.js" afterPath="$PROJECT_DIR$/lib/oauth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="node-oauth2-provider.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,36 +23,6 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/index.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="8.754386" vertical-offset="1128" max-vertical-offset="4964">
-                    <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="old.js" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/lib/old.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.9087657" vertical-offset="427" max-vertical-offset="1496">
-                    <caret line="55" column="78" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="node-oauth2-provider" />
@@ -63,7 +32,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1581">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1581">
               <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
               <folding />
             </state>
@@ -73,8 +42,20 @@
       <file leaf-file-name="oauth.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/oauth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5582329" vertical-offset="2289" max-vertical-offset="3570">
-              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4437751" vertical-offset="1275" max-vertical-offset="3604">
+              <caret line="90" column="60" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#45#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Storage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/v2_express4/Storage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
               <folding>
                 <element signature="e#0#45#0" expanded="false" />
               </folding>
@@ -85,8 +66,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/v2_express4/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.491228" vertical-offset="555" max-vertical-offset="1785">
-              <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+            <state vertical-scroll-proportion="-5.368421" vertical-offset="102" max-vertical-offset="1819">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -106,6 +87,7 @@
         <option value="$PROJECT_DIR$/lib/old.js" />
         <option value="$PROJECT_DIR$/lib/index.js" />
         <option value="$PROJECT_DIR$/examples/v2_express4/app.js" />
+        <option value="$PROJECT_DIR$/examples/v2_express4/Storage.js" />
         <option value="$PROJECT_DIR$/lib/oauth.js" />
       </list>
     </option>
@@ -189,24 +171,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="v2_express4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-oauth2-provider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-oauth2-provider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple_express4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -386,10 +350,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.754386" vertical-offset="1128" max-vertical-offset="4964">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/v2_express4/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.491228" vertical-offset="555" max-vertical-offset="1785">
-          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+        <state vertical-scroll-proportion="-5.368421" vertical-offset="102" max-vertical-offset="1819">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -402,11 +374,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/examples/v2_express4/Storage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.754386" vertical-offset="1128" max-vertical-offset="4964">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -420,8 +394,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/oauth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5582329" vertical-offset="2289" max-vertical-offset="3570">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4437751" vertical-offset="1275" max-vertical-offset="3604">
+          <caret line="90" column="60" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
           <folding>
             <element signature="e#0#45#0" expanded="false" />
           </folding>
