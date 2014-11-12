@@ -6,15 +6,6 @@ refresh_token to keep always up to date the access_tokens.
 
 Actually you only need to take care of storing (store and retrieve of codes, tokens, clients, ...).
 
-# Greetings to Amir Malik (ammmir)
-
-This library born as a Fork of [node-oauth2-provider](https://github.com/ammmir/node-oauth2-provider) created by
-[**Amir Malik**](https://github.com/ammmir) and taking ideas from
-[node-oauth2-server](https://github.com/thomseddon/node-oauth2-server)
-from [**Thom Seddon**](https://github.com/thomseddon). I've changed some parts to be more RFC 6749 compliant,
-add refresh_token grant_type and remove all events to convert them to a manager defined by the developer.
-
-# OAuth 2 Provider for Connect & Express
 
 This is a node.js module for implementing OAuth2 servers (providers)
 that support server-side (code) and client-side (token) OAuth flows.
@@ -23,6 +14,14 @@ It's very customizable, so you can (and currently, must) take care of
 OAuth token storage and client lists. In the future, a Mongo or Redis
 backed abstraction will be provided so you don't need to care about
 any kind of storage at all.
+
+## Greetings to Amir Malik (ammmir)
+
+This library born as a Fork of [node-oauth2-provider](https://github.com/ammmir/node-oauth2-provider) created by
+[**Amir Malik**](https://github.com/ammmir) and taking ideas from
+[node-oauth2-server](https://github.com/thomseddon/node-oauth2-server)
+from [**Thom Seddon**](https://github.com/thomseddon). I've changed some parts to be more RFC 6749 compliant,
+add refresh_token grant_type and remove all events to convert them to a manager defined by the developer.
 
 ## Using it with npm
 
