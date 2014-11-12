@@ -1,0 +1,5 @@
+<html>this app (ClientId: <%= client_id %>)wants to access your account...
+<form method="post" action="<%= authorize_url %>">
+    <button name="allow">Allow</button>
+    <button name="deny">Deny</button>
+</form>

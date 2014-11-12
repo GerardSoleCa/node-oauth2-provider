@@ -22,29 +22,22 @@ var myGrants = {};
 var oauthProvider = new OAuth2Provider({
     crypt_key: 'encryption secret',
     sign_key: 'signing secret',
-    storage: storage
+    storage: storage,
+    token_expires_in: 3600,
+    debug: true
 });
 
-oauthProvider.checkLogin(function (req, res, next) {
-    next("gerard");
-    //if(req.cookie()){
-    //
-    //} else {
-    //    res.writeHead(303, {Location: '/login?next=' + encodeURIComponent(authorize_url)});
-    //    res.end();
-    //}
-});
+//oauthProvider.authorizeForm(function(req, res, client_id, authorize_url){
+//    res.end('<html>this app wants to access your account... <form method="post" action="' + authorize_url + '"><button name="allow">Allow</button><button name="deny">Deny</button></form>');
+//});
 
-oauthProvider.authorizeForm(function(req, res, client_id, authorize_url){
-    res.end('<html>this app wants to access your account... <form method="post" action="' + authorize_url + '"><button name="allow">Allow</button><button name="deny">Deny</button></form>');
-});
-
-oauthProvider.saveGrant(function (clientId, userId, code) {
-    myGrants[clientId+'.'+userId] = code;
-});
+//oauthProvider.saveGrant(function (clientId, userId, code) {
+//    myGrants[clientId+'.'+userId] = code;
+//});
 
 
 app.use(logger('dev'));
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.query());
 app.use(cookieParser());
@@ -64,24 +57,6 @@ app.get('/', function (req, res, next) {
     res.end('home, logged in? ' + !!req.session.user);
 });
 
-app.get('/login', function (req, res, next) {
-    if (req.session.user) {
-        res.writeHead(303, {Location: '/'});
-        return res.end();
-    }
-
-    var next_url = req.query.next ? req.query.next : '/';
-
-    res.end('<html><form method="post" action="/login"><input type="hidden" name="next" value="' + next_url + '"><input type="text" placeholder="username" name="username"><input type="password" placeholder="password" name="password"><button type="submit">Login</button></form>');
-});
-
-app.post('/login', function (req, res, next) {
-    req.session.user = req.body.username;
-
-    res.writeHead(303, {Location: req.body.next || '/'});
-    res.end();
-});
-
 app.get('/logout', function (req, res, next) {
     req.session.destroy(function (err) {
         res.writeHead(303, {Location: '/'});
@@ -94,6 +69,8 @@ app.get('/secret', oauthProvider.enforceLogin(), function (req, res, next) {
 });
 
 app.listen(8081);
+
+console.log('Listening on http://localhost:8081/');
 
 function escape_entities(s) {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
