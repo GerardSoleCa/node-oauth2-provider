@@ -19,11 +19,20 @@ var app = express();
 // temporary grant storage
 var myGrants = {};
 
+/**
+ * crypt_key and sign_key are used to sign and encrypt the content of accessToken
+ * manager is implemented by the developer
+ *
+ */
 var oauthProvider = new OAuth2Provider({
     crypt_key: 'encryption secret',
     sign_key: 'signing secret',
     storage: storage,
-    token_expires_in: 3600,
+    authorize_uri : '/oauth/authorize',
+    access_token_uri : '/oauth/token',
+    token_expiration: 3600,
+    persist_refreshtoken: true,
+    persist_accesstoken: true,
     debug: true
 });
 
