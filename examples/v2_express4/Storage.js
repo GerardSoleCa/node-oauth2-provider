@@ -6,16 +6,6 @@ var clients = [];
 var accessTokens = [];
 module.exports = {
 
-    /**
-     * CLIENTS MANAGEMENT
-     */
-    /**
-     * This checks if clientId is correct
-     *
-     * @param clientId
-     * @param clientSecret
-     * @param callback
-     */
     getClient: function (clientId, clientSecret, callback) {
         var client = clients[clientId];
 
@@ -26,12 +16,6 @@ module.exports = {
         }
     },
 
-    /**
-     * Authentication of the user is out of the scope of this library. You can use wherever you want.
-     * @param req
-     * @param res
-     * @param callback
-     */
     getUserOrLoadLogin: function (req, res, authorizeUrl, callback) {
         if (req.session.userId) {
             callback(req.session.userId);
@@ -53,11 +37,6 @@ module.exports = {
         res.render('oauth_authorization', {client_id: clientId, authorize_url: authorizeUrl})
     },
 
-
-    /**
-     * AUTHORITZATION_CODE
-     */
-
     saveCode: function (code, clientId, userId, expires) {
         codes[code] = {
             client_id: clientId,
@@ -75,10 +54,6 @@ module.exports = {
         callback(codes[code]);
     },
 
-
-    /**
-     * ACCESS_TOKEN
-     */
     addFieldsToAccessToken: function (clientId, userId, callback) {
         var fields = {
             test_field: 'test test'

@@ -73,15 +73,10 @@ app.get('/logout', function (req, res, next) {
     });
 });
 
-app.get('/secret', oauthProvider.enforceLogin(), function (req, res, next) {
+app.get('/secret', oauthProvider.enforceLogin(),enforceLogin("pepe"), function (req, res, next) {
     res.end('SECRET');
 });
 
 app.listen(8081);
 
 console.log('Listening on http://localhost:8081/');
-
-function escape_entities(s) {
-    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-
