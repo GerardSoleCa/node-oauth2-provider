@@ -37,10 +37,10 @@ module.exports = {
         res.render('oauth_authorization', {client_id: clientId, authorize_url: authorizeUrl})
     },
 
-    saveCode: function (code, clientId, userId, expires) {
+    saveCode: function (code, client_id, user_id, expires) {
         codes[code] = {
-            client_id: clientId,
-            user_id: userId,
+            client_id: client_id,
+            user_id: user_id,
             expires: expires
         };
         console.log(codes);
@@ -54,7 +54,7 @@ module.exports = {
         callback(codes[code]);
     },
 
-    addFieldsToAccessToken: function (clientId, userId, callback) {
+    addFieldsToAccessToken: function (client_id, client_secret, user_id, callback) {
         var fields = {
             test_field: 'test test'
         };

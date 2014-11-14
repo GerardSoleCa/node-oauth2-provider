@@ -28,8 +28,8 @@ var oauthProvider = new OAuth2Provider({
     crypt_key: 'encryption secret',
     sign_key: 'signing secret',
     storage: storage,
-    authorize_uri : '/oauth/authorize',
-    access_token_uri : '/oauth/token',
+    authorize_uri: '/oauth/authorize',
+    access_token_uri: '/oauth/token',
     token_expiration: 3600,
     persist_refreshtoken: true,
     persist_accesstoken: true,
@@ -73,8 +73,8 @@ app.get('/logout', function (req, res, next) {
     });
 });
 
-app.get('/secret', oauthProvider.enforceLogin(),enforceLogin("pepe"), function (req, res, next) {
-    res.end('SECRET');
+app.get('/secret', oauthProvider.needsOAuth(), function (req, res, next) {
+    res.json({response: 'SECRET'});
 });
 
 app.listen(8081);
