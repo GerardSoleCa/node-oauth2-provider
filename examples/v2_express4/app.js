@@ -31,6 +31,7 @@ var oauthProvider = new OAuth2Provider({
     authorize_uri: '/oauth/authorize',
     access_token_uri: '/oauth/token',
     token_expiration: 3600,
+    refresh_token: true,
     persist_refreshtoken: true,
     persist_accesstoken: true,
     debug: true
