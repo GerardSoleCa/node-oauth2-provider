@@ -1,13 +1,11 @@
-/**
- * Created by Pavilion on 11/11/2014.
- */
 var codes = [];
 var clients = [];
 var accessTokens = [];
+
 module.exports = {
 
-    getClient: function (clientId, clientSecret, callback) {
-        var client = clients[clientId];
+    getClient: function (client_id, client_secret, callback) {
+        var client = clients[client_id];
 
         if (client) {
             callback(client);
@@ -16,11 +14,11 @@ module.exports = {
         }
     },
 
-    getUserOrLoadLogin: function (req, res, authorizeUrl, callback) {
+    getUserOrLoadLogin: function (req, res, authorize_uri, callback) {
         if (req.session.userId) {
             callback(req.session.userId);
         } else {
-            res.render('oauth_login', {next: encodeURIComponent(authorizeUrl)});
+            res.render('oauth_login', {next: encodeURIComponent(authorize_uri)});
         }
     },
 
@@ -33,8 +31,8 @@ module.exports = {
         }
     },
 
-    loadAuthorizeForm: function (req, res, clientId, authorizeUrl) {
-        res.render('oauth_authorization', {client_id: clientId, authorize_url: authorizeUrl})
+    loadAuthorizeForm: function (req, res, client_id, authorize_uri) {
+        res.render('oauth_authorization', {client_id: client_id, authorize_url: authorize_uri})
     },
 
     saveCode: function (code, client_id, user_id, expires) {
@@ -61,7 +59,7 @@ module.exports = {
         callback(fields);
     },
 
-    saveAccessToken: function (accessToken) {
+    saveAccessToken: function (access_token) {
 
     }
 };
@@ -71,7 +69,7 @@ var populateTestData = function () {
     clients[clientId] = {
         client_id: 'clientId',
         client_secret: 'clientSecret',
-        redirect_uri: 'http://myapp.foo/'
+        redirect_uri: 'localhost'
     };
 };
 
