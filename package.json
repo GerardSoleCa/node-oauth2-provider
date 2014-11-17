@@ -12,7 +12,13 @@
     "serializer": ">=0.0.2 <0.1.0"
   },
   "devDependencies": {
-    "frisby": "*"
+    "frisby": "*",
+    "jasmine-node":"*",
+    "forever":"*"
+  },
+  "scripts": {
+    "postinstall":"cd examples/v2_express4 && npm install && npm start",
+    "test": "./node_modules/jasmine-node/bin/jasmine-node . --junitreport"
   },
   "licenses": [
     {

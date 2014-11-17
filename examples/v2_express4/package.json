@@ -5,6 +5,10 @@
     "express": "^4.7.2",
     "express-session": "^1.7.2",
     "morgan": "^1.2.2",
-    "ejs":"*"
+    "ejs": "*",
+    "forever": "*"
+  },
+  "scripts": {
+    "start": "./node_modules/forever/bin/forever start app.js"
   }
 }
