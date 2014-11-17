@@ -1,27 +1,15 @@
-# OAuth2.0 Provider for Express JS
+# OAuth2.0 Express
 
-This is a node.js module for ExpressJs which implements an OAuth2.0 server (provider)
-that supports server-side (code) and client-side (token) OAuth flows, along with
-refresh_token to keep always up to date the access_tokens.
+This is an OAuth2.0 Provider compliant with [RFC6749](https://tools.ietf.org/html/rfc6749).
+This provider is designed as a secure middleware for [Express](http://expressjs.com/). Actually it supports
+authorization_code, password and refresh_token grants and code and token OAuth flows.
 
 Actually you only need to take care of storing (store and retrieve of codes, tokens, clients, ...).
 
-
-This is a node.js module for implementing OAuth2 servers (providers)
-that support server-side (code) and client-side (token) OAuth flows.
-
-It's very customizable, so you can (and currently, must) take care of
-OAuth token storage and client lists. In the future, a Mongo or Redis
-backed abstraction will be provided so you don't need to care about
-any kind of storage at all.
-
 ## Greetings to Amir Malik (ammmir)
 
-This library born as a Fork of [node-oauth2-provider](https://github.com/ammmir/node-oauth2-provider) created by
-[**Amir Malik**](https://github.com/ammmir) and taking ideas from
-[node-oauth2-server](https://github.com/thomseddon/node-oauth2-server)
-from [**Thom Seddon**](https://github.com/thomseddon). I've changed some parts to be more RFC 6749 compliant,
-add refresh_token grant_type and remove all events to convert them to a manager defined by the developer.
+This library born as a fork of Amir Malik's [**node-oauth2-provider**](https://github.com/ammmir/node-oauth2-provider).
+You can review the Git history to view changes in commits and the evolution of this library.
 
 ## Using it with npm
 
@@ -30,13 +18,13 @@ version in your app's `package.json` file. Major versions may have an
 incompatible API that's not backwards-compatible, so use a safe version
 range under `dependencies` (eg. for version 1.x):
 
-    "oauth2-provider": "1.x"
+    "oauth2-express": "1.x"
 
 ## Quick Start
 
 Install via npm:
 
-    npm install oauth2-provider
+    npm install oauth2-express
 
 You can add it to your Connect or Express application as another middleware.
 Be sure to enable the `bodyParser` and `query` middleware.
