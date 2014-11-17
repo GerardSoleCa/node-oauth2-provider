@@ -9,15 +9,8 @@ var OAuth2Provider = require('../../lib/index').OAuth2Provider,
     logger = require('morgan'),
     storage = require('./Storage');
 
-// hardcoded list of <client id, client secret> tuples
-var myClients = {
-    '1': '1secret',
-};
 
 var app = express();
-
-// temporary grant storage
-var myGrants = {};
 
 /**
  * crypt_key and sign_key are used to sign and encrypt the content of accessToken
@@ -37,15 +30,6 @@ var oauthProvider = new OAuth2Provider({
     debug: true
 });
 
-//oauthProvider.authorizeForm(function(req, res, client_id, authorize_url){
-//    res.end('<html>this app wants to access your account... <form method="post" action="' + authorize_url + '"><button name="allow">Allow</button><button name="deny">Deny</button></form>');
-//});
-
-//oauthProvider.saveGrant(function (clientId, userId, code) {
-//    myGrants[clientId+'.'+userId] = code;
-//});
-
-
 app.use(logger('dev'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -57,8 +41,6 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
-//app.use(oauthProvider.oauth());
-//app.use(oauthProvider.login());
 
 app.use(oauthProvider.middleware());
 

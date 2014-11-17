@@ -1,6 +1,7 @@
 var codes = [];
 var clients = [];
 var accessTokens = [];
+var users = [];
 
 module.exports = {
 
@@ -61,6 +62,14 @@ module.exports = {
 
     saveAccessToken: function (access_token) {
 
+    },
+
+    passwordGrantType: function (client_id, client_secret, username, password, callback) {
+        if (users[username].username == password) {
+            callback(username);
+        } else {
+            callback(false);
+        }
     }
 };
 
@@ -69,8 +78,19 @@ var populateTestData = function () {
     clients[clientId] = {
         client_id: 'clientId',
         client_secret: 'clientSecret',
-        redirect_uri: 'localhost'
+        redirect_uri: 'http://localhost:8081/'
     };
+
+    codes['abc'] = {
+        client_id: "clientId",
+        user_id: "userId",
+        expires: new Date()
+    };
+
+    users['test'] = {
+        username: 'test',
+        password: 'test'
+    }
 };
 
 populateTestData();
