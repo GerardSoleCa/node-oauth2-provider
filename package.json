@@ -17,8 +17,8 @@
     "forever":"*"
   },
   "scripts": {
-    "postinstall":"cd examples/v2_express4 && npm install && npm start",
-    "test": "./node_modules/jasmine-node/bin/jasmine-node . --junitreport"
+    "pretest":"cd examples/v2_express4 && npm install && npm start",
+    "test": "npm script pretest && ./node_modules/jasmine-node/bin/jasmine-node . --junitreport"
   },
   "licenses": [
     {
