@@ -4,8 +4,8 @@
   "description": "A simple customizable OAuth 2.0 provider (server) for node.js.",
   "homepage": "https://github.com/GerardSoleCa/oauth2-express",
   "author": {
-    "name": "Amir Malik",
-    "url": "http://amirmalik.net/"
+    "name": "Gerard Solé",
+    "url": "https://github.com/GerardSoleCa/oauth2-express"
   },
   "main": "index",
   "dependencies": {
